@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_height="fill_parent" android:layout_width="fill_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="80dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:outlineProvider="bounds"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/card_view6"
+        card_view:cardBackgroundColor="#dad9d8"
+        card_view:cardCornerRadius="10dp"
+        card_view:paddingStart="@dimen/fab_margin"
+        card_view:cardElevation="5dp"
+        android:layout_marginTop="3px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="5dp">
+
+        <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+            android:layout_alignTop="@+id/card_view"
+            android:layout_alignStart="@+id/card_view"
+            android:layout_alignEnd="@+id/card_view"
+            android:layout_alignBottom="@+id/card_view">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btdata"
+                android:hint="BT DATA RECEIVED"
+                android:textStyle="italic|bold"
+                android:textColorHint="#5b5858"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_alignParentTop="false"
+                android:layout_toEndOf="@+id/paad"
+                android:textSize="27dp"
+                android:textColor="#7d7b7b" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sendingstatus"
+                android:layout_below="@+id/btdata"
+                android:layout_alignStart="@+id/btdata"
+                android:hint="Network Status"
+                android:textStyle="italic"
+                android:textColorHint="#7e7b7b"
+                android:textColor="#7e7b7b"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/paad"
+                android:layout_marginLeft="5dp"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/ic_launcher_btmain" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view6"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:outlineProvider="bounds"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="true"
+        card_view:cardBackgroundColor="#dad9d8"
+        card_view:cardCornerRadius="10dp"
+        card_view:paddingStart="@dimen/fab_margin"
+        card_view:cardElevation="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="5dp">
+
+        <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+            android:layout_alignTop="@+id/card_view"
+            android:layout_alignStart="@+id/card_view"
+            android:layout_alignEnd="@+id/card_view"
+            android:layout_alignBottom="@+id/card_view">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bttatus"
+                android:hint="BT STATUS"
+                android:textStyle="italic|bold"
+                android:textColorHint="#5b5858"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentTop="false"
+                android:textSize="24dp"
+                android:textColor="#7d7b7b" />
+
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imgbtstatus"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/ic_disconn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Disconnected"
+                android:textStyle="italic|bold"
+                android:id="@+id/statusview"
+                android:textSize="25sp"
+                android:textColor="#a11b1d"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBottom="@+id/progressBar3"
+                android:layout_below="@+id/bttatus" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar3"
+                android:progressDrawable="@drawable/circular"
+                android:layout_alignParentEnd="false"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="262dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view2"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:outlineProvider="bounds"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/card_view"
+        card_view:cardBackgroundColor="#dcdbda"
+        card_view:cardCornerRadius="10dp"
+        card_view:paddingStart="@dimen/fab_margin"
+        card_view:cardElevation="5dp"
+        android:layout_marginTop="5px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="5dp">
+
+        <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+            android:layout_alignTop="@+id/card_view"
+            android:layout_alignStart="@+id/card_view"
+            android:layout_alignEnd="@+id/card_view"
+            android:layout_alignBottom="@+id/card_view">
+
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/imageView4"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentStart="false"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/ic_fuel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FUEL"
+                android:id="@+id/textView5"
+                android:textSize="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentTop="false"
+                android:layout_toEndOf="@+id/imageView4"
+                android:fontFamily="arial"
+                android:textStyle="italic|bold"
+                android:layout_marginTop="0dp"
+                android:textColor="#6a6868" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fuelview"
+                android:layout_below="@+id/textView5"
+                android:layout_alignStart="@+id/textView5"
+                android:hint="Fuel level "
+                android:fontFamily="italics"
+                android:textColorHint="#898888"
+                android:textSize="25dp"
+                android:textColor="#5e5c5c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ltr"
+                android:textStyle="italic|bold"
+                android:id="@+id/textView6"
+                android:textSize="25sp"
+                android:layout_below="@+id/textView5"
+                android:layout_toEndOf="@+id/fuelview"
+                android:textColor="#437b30"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="35dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view3"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:outlineProvider="bounds"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/card_view2"
+        card_view:cardBackgroundColor="#dadad9"
+        card_view:cardCornerRadius="10dp"
+        card_view:paddingStart="@dimen/fab_margin"
+        card_view:cardElevation="5dp"
+        android:layout_marginTop="3px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="5dp">
+
+        <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+            android:layout_alignTop="@+id/card_view"
+            android:layout_alignStart="@+id/card_view"
+            android:layout_alignEnd="@+id/card_view"
+            android:layout_alignBottom="@+id/card_view">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageView5"
+                android:layout_centerVertical="false"
+                android:layout_alignParentStart="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/i_rpm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:layout_alignParentTop="false"
+                android:textStyle="italic|bold"
+                android:layout_toEndOf="@+id/imageView5"
+                android:text="RPM"
+                android:textSize="30sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#646363"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rpmview"
+                android:textSize="25sp"
+                android:layout_below="@+id/textView7"
+                android:layout_alignStart="@+id/textView7"
+                android:hint="Engine RPM"
+                android:textColorHint="#898888"
+                android:textColor="#5e5c5c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   rpm"
+                android:textStyle="italic|bold"
+                android:id="@+id/textView10"
+                android:textSize="25sp"
+                android:textColor="#437b30"
+                android:layout_alignTop="@+id/rpmview"
+                android:layout_toEndOf="@+id/rpmview"
+                android:layout_marginTop="0dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view4"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:outlineProvider="bounds"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/card_view3"
+        card_view:cardBackgroundColor="#dedddc"
+        card_view:cardCornerRadius="10dp"
+        card_view:paddingStart="@dimen/fab_margin"
+        card_view:cardElevation="5dp"
+        android:layout_marginTop="3px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="2dp">
+
+        <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+            android:layout_alignTop="@+id/card_view"
+            android:layout_alignStart="@+id/card_view"
+            android:layout_alignEnd="@+id/card_view"
+            android:layout_alignBottom="@+id/card_view">
+
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/imageView6"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ic_launchersspeed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textStyle="italic|bold"
+                android:text="SPEED"
+                android:textSize="30sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#646363"
+                android:layout_alignParentTop="false"
+                android:layout_toEndOf="@+id/imageView6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speedview"
+                android:textSize="25sp"
+                android:hint="Car Speed"
+                android:textColorHint="#898888"
+                android:layout_below="@+id/textView9"
+                android:layout_alignStart="@+id/textView9"
+                android:textColor="#5e5c5c" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" kmph"
+                android:textStyle="italic|bold"
+                android:id="@+id/textView8"
+                android:textSize="25sp"
+                android:textColor="#437b30"
+                android:layout_below="@+id/textView9"
+                android:layout_toEndOf="@+id/speedview"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="25dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

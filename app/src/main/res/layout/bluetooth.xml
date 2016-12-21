@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/btlayout">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="247sp"
+        android:id="@+id/imageView2"
+        android:src="@mipmap/imgw"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="65dp"
+        android:alpha="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@mipmap/imgw"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp" />
+
+    <ImageButton
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:id="@+id/paireddev"
+        android:background="@drawable/button"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="10sp"
+        android:layout_marginLeft="20sp"
+        android:src="@mipmap/ic_launcherbt"
+        android:onClick="paireddevices"
+        android:focusable="true"
+        android:elevation="30dp" />
+
+    <ImageButton
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:id="@+id/imageButton2"
+        android:layout_alignBottom="@+id/paireddev"
+        android:layout_toEndOf="@+id/paireddev"
+        android:background="@drawable/button2"
+        android:elevation="30dp"
+        android:src="@mipmap/ic_disconn" />
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:text="Disconnected"
+        android:id="@+id/disctextid"
+        android:textSize="35sp"
+        android:textColor="#d80c0c"
+        android:alpha="0.7"
+        android:layout_alignBottom="@+id/discid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-43dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:padding="0dp"
+        android:shadowColor="#676464"
+        android:elevation="2dp" />
+
+    <ImageView
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:id="@+id/discid"
+        android:src="@mipmap/ic_disconn"
+        android:elevation="20dp"
+        android:alpha="0.8"
+        android:focusable="true"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar3"
+        android:layout_above="@+id/imageButton2"
+        android:layout_centerHorizontal="true"
+        android:progressDrawable="@drawable/circular"/>
+
+    <Button
+        android:layout_width="145dp"
+        android:layout_height="170dp"
+        android:id="@+id/intentbutton"
+        android:layout_marginTop="358dp"
+        android:layout_marginLeft="198dp"
+        android:text="TAP\nTO PAIR\nBT DEVICE\n(*Required\nFirst time setup) "
+        android:textStyle="italic|bold"
+        android:background="@drawable/intent" />
+
+    <ImageButton
+        android:layout_width="170dp"
+        android:layout_height="82dp"
+        android:id="@+id/imageButton"
+        android:layout_alignBottom="@+id/intentbutton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="0dp"
+        android:background="#822178" />
+
+    android:layout_marginLeft="3dp" />
+
+</RelativeLayout>

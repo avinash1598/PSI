@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:alpha="1">
+
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:layout_marginTop="66dp"
+    android:fillViewport="true">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="fill_parent"
+        >
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:outlineProvider="bounds"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            card_view:cardBackgroundColor="#c7c5c2"
+            card_view:cardCornerRadius="10dp"
+            android:layout_marginTop="0dp"
+            card_view:paddingStart="@dimen/fab_margin"
+            card_view:cardElevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp">
+
+    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+        >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="25sp"
+                android:textColor="#504f4f"
+                android:text="Enter the Google Form Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+
+                android:layout_marginTop="20dp"
+                android:background="#c7c5c1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="data will be posted to the google form based on info provided"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="10dp"
+                android:textColor="#7b7a7a" />
+
+
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:hint=" ENTER THE URL"
+                android:id="@+id/url"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="30sp"
+                android:layout_marginLeft="7dp"
+                android:drawableLeft="@mipmap/ic_launcher_sheet"
+                android:background="@drawable/gftext"
+                android:textColorHint="#828080"
+                android:textColor="#828080"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint=" FUEL KEY ID\n i.e.entry_750805260"
+                android:id="@+id/fuel"
+                android:textColor="#828080"
+                android:layout_below="@+id/url"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="7dp"
+                android:drawableLeft="@mipmap/ic_fuel"
+                android:background="@drawable/gftext"
+                android:textColorHint="#828080"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint=" RPM KEY ID\n i.e.entry_750805260"
+                android:id="@+id/rpm"
+                android:textColor="#828080"
+                android:layout_below="@+id/fuel"
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="7dp"
+                android:drawableLeft="@mipmap/i_rpm"
+                android:background="@drawable/gftext"
+                android:textColorHint="#828080"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:hint=" SPEED KEY ID\n i.e.entry_750805260"
+                android:id="@+id/speed"
+                android:textColor="#828080"
+                android:layout_below="@+id/rpm"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"
+                android:drawableLeft="@mipmap/ic_launchersspeed"
+                android:background="@drawable/gftext"
+                android:textColorHint="#828080"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitt"
+                android:background="@drawable/submit"
+
+                android:layout_below="@+id/speed"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="18dp"
+                android:src="@mipmap/ic_launcher_right"
+                android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Enter url of the google form and to get the key id refer the form using inspect element"
+            android:id="@+id/textView3"
+            android:layout_alignTop="@+id/submitt"
+            android:layout_alignStart="@+id/speed"
+            android:layout_toStartOf="@+id/submitt"
+            android:drawableLeft="@drawable/alert"
+            android:textColor="#828080"/>
+
+    </RelativeLayout>
+        </android.support.v7.widget.CardView>
+</RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+
